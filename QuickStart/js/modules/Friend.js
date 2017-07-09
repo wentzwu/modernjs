@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Friend = (function () {
     function Friend() {
+        this.Greet = function (message) { return console.log(message); };
     }
     Object.defineProperty(Friend.prototype, "FullName", {
         get: function () {
@@ -10,6 +11,9 @@ var Friend = (function () {
         enumerable: true,
         configurable: true
     });
+    Friend.prototype.Say = function (message) {
+        console.log(message);
+    };
     return Friend;
 }());
 exports.Friend = Friend;
